@@ -22,7 +22,7 @@ http.createServer(function (req, res) {
          break;
       }
       case "/api/beers/delete":{
-         Controler.del(res, req);
+         Controler.delete(res, req);
          break;
       }
       default:

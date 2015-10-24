@@ -10,7 +10,9 @@ var Controler = {
         category: "pilsen"
      };
 
-     Model.save(function(err, data){
+     var model = new Model(dados);
+
+     model.save(function(err, data){
         if (err){
           console.log('Erro: ', err);
             msg = 'Erro' + err;
@@ -35,13 +37,14 @@ var Controler = {
         mult: true
      }
 
+
      Model.update(query, mod, optional, function(err, data){
       if (err){
          console.log("erro", err);
          msg = 'Erro:' + err;
       } else {
          console.log("update", data);
-         msg = 'update' + data;
+         msg = 'Atualizou: ' + data;
       }
       res.write(msg);
       res.end();
@@ -62,8 +65,8 @@ var Controler = {
          res.end();
       });
    },
-   del: function(res, req){
-      var query = {name: /brahma/i};
+   delete: function(res, req){
+      var query = {name: /skol/i};
 
       Model.remove(query, function(err, data){
          if (err){
@@ -71,7 +74,7 @@ var Controler = {
             msg = 'erro: ' + err;
          } else {
             console.log("Deletado com sucesso.", data);
-            msg = 'Deletado com sucesso.' + data;
+            msg = 'Deletado com sucesso: ' + data;
          }
          res.write(msg);
          res.end();
