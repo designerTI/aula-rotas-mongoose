@@ -27,7 +27,7 @@ http.createServer(function (req, res) {
       }
       default:
       {
-         res.write("Home!");
+         res.write("Inicio!");
          res.end();
          break;
       }
