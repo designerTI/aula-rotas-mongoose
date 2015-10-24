@@ -1,0 +1,19 @@
+{
+  "name": "aula-mongoose",
+  "version": "1.0.0",
+  "description": "aula sobre mongoose",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongoose",
+    "nodejs",
+    "mongoDB"
+  ],
+  "author": "Ednilson Fernando Devilla",
+  "license": "WTFPL",
+  "dependencies": {
+    "mongoose": "^4.2.2"
+  }
+}
